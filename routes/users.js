@@ -9,4 +9,11 @@ const Users = {
   ved001: "Vedant Khairnar"
 };
 
+app.get("/", (req, res) => {
+  res.json(Users);
+});
+app.get("/:User", (req, res) => {
+  res.json(Users[req.params.User]);
+});
+
 module.exports = app;
