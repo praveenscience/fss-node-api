@@ -4,7 +4,7 @@
   "description": "A simple example to show an API.",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/praveenscience/fss-node-api#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
   }
 }
