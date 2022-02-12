@@ -1,18 +1,13 @@
 const express = require("express");
 const app = express();
 const port = 5000;
+const Users = require("./routes/users");
 
 app.get("/", (req, res) => {
   res.json("Hello FSS! 👋🏻");
 });
 
-app.get("/:User", (req, res) => {
-  res.json({
-    Message: `Hello ${req.params.User}! 👋🏻`,
-    Params: req.params,
-    QueryString: req.query
-  });
-});
+app.use("/users", Users);
 
 app.listen(port, () => {
   console.log(`Server started in port ${port}.`);
