@@ -6,11 +6,8 @@ app.get("/", (req, res) => {
   res.json("Hello FSS! 👋🏻");
 });
 
-app.get("/chintan357", (req, res) => {
-  res.json("Hello Chintan! 👋🏻");
-});
-app.get("/loki", (req, res) => {
-  res.json("Hello Lokesh V! 👋🏻");
+app.get("/:User", (req, res) => {
+  res.json(`Hello ${req.params.User}! 👋🏻`);
 });
 
 app.listen(port, () => {
