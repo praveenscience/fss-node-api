@@ -7,7 +7,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/:User", (req, res) => {
-  res.json(`Hello ${req.params.User}! 👋🏻`);
+  res.json({
+    Message: `Hello ${req.params.User}! 👋🏻`,
+    Params: req.params,
+    QueryString: req.query
+  });
 });
 
 app.listen(port, () => {
